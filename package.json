@@ -1,0 +1,27 @@
+{
+  "name": "selenium-screenshots",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "PORT=4030 pm2 start ./bin/www --name \"selenium-screenshots\"",
+    "watch": "PORT=4030 DEBUG=app:* pm2 start ./bin/www --name \"selenium-screenshots\" --watch",
+    "restart": "pm2 restart bs-proxy --update-env",
+    "logs": "pm2 logs",
+    "clean": "pm2 delete bs-proxy"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chromedriver": "^2.38.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "phantomjs": "^2.1.7",
+    "pm2": "^2.10.3",
+    "resemblejs": "^2.10.1",
+    "selenium-server-standalone-jar": "^3.11.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
